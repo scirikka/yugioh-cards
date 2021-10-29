@@ -6,7 +6,7 @@ import { Card } from '../entities/entities';
 @Injectable({
   providedIn: 'root'
 })
-export class CardServiceService {
+export class CardService {
 
   private url = "https://db.ygoprodeck.com/api/v7/cardinfo.php"
 
