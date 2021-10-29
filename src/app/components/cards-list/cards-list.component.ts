@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from 'src/app/services/card.service';
+import {Card} from '../../entities/entities'
 
 @Component({
   selector: 'app-cards-list',
@@ -8,9 +9,12 @@ import { CardService } from 'src/app/services/card.service';
 })
 export class CardsListComponent implements OnInit {
 
+  cardsList : Card[] = []; 
+
   constructor(private cardService : CardService) { }
 
   ngOnInit(): void {
+    this.cardService.getCards().subscribe(data => this.cardsList = data);
   }
 
 }
