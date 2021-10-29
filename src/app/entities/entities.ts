@@ -1,3 +1,7 @@
+export interface CardObject{
+    data : Card[]
+}
+
 export interface Card{
     id : number,
     name : string,
