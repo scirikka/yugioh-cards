@@ -9,12 +9,12 @@ import {Card} from '../../entities/entities'
 })
 export class CardsListComponent implements OnInit {
 
-  cardsList : Card[] = []; 
+  cards : Card[] = [];
 
   constructor(private cardService : CardService) { }
 
   ngOnInit(): void {
-    this.cardService.getCards().subscribe(data => this.cardsList = data);
+    this.cardService.getCards().subscribe(data => this.cards = data);
   }
 
 }
